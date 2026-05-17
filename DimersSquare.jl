@@ -32,9 +32,11 @@ function compute_oneper()
         Venv = ℂ^χ # bond dimension χ 
         println("Random environment initialization with χ = $χ")
         env₀ = CTMRGEnv(Z, Venv)
-        env, = leading_boundary(env₀, Z; tol = 1.0e-9, maxiter = 10000);
+        env, = leading_boundary(env₀, Z; tol = 1.0e-9, maxiter = 10000, verbosity = 2);
+        env, = leading_boundary(env, Z; tol = 1.0e-9, maxiter = 4, verbosity = 3);
         λ[i] = abs(network_value(Z, env)) 
         @show log(λ[i])
+        @show network_value(Z, env)
         @show exact= MathConstants.catalan/π
         @warn("TODO : implement correlation functions : dimer-dimer; monomer-monomer")
     end

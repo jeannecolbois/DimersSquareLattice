@@ -873,7 +873,9 @@ version = "10.42.0+1"
 
 [[deps.PEPSKit]]
 deps = ["Accessors", "ChainRulesCore", "Compat", "DocStringExtensions", "FiniteDifferences", "KrylovKit", "LinearAlgebra", "LoggingExtras", "MPSKit", "MPSKitModels", "MatrixAlgebraKit", "OhMyThreads", "OptimKit", "Printf", "Random", "Statistics", "TensorKit", "TensorOperations", "VectorInterface", "Zygote"]
-path = "/home/jcolbois/.julia/dev/PEPSKit"
+git-tree-sha1 = "d4e71c4566283e079762bd8f8ce5768a691fdd95"
+repo-rev = "lb/initialize_env"
+repo-url = "https://github.com/QuantumKitHub/PEPSKit.jl.git"
 uuid = "52969e89-939e-4361-9b68-9bc7cde4bdeb"
 version = "0.7.0"
 

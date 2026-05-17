@@ -51,9 +51,13 @@ envref_grown,info = leading_boundary(envref, Z; grow_alg...);
 envref_final, info = leading_boundary(envref_grown, Z; trunc = truncrank(2^log2χ), tol = 1.0e-8, maxiter = 10000, verbosity = 2);
 λ =  abs(network_value(Z, envref_final)); 
 @show abs(log(λ) -  MathConstants.catalan/π)
+env, = leading_boundary(envref_final, Z; tol = 1.0e-9, maxiter = 4, verbosity = 3);
+@show network_value(Z, env)
 
 # same with the product state initialization
 env0_prod_grown,info = leading_boundary(env0_prod, Z; grow_alg...); 
 env0_prod_final, info = leading_boundary(env0_prod_grown, Z; trunc = truncrank(2^log2χ), tol = 1.0e-8, maxiter = 10000, verbosity = 2);
 λ_prod =  abs(network_value(Z, env0_prod_final)); 
 @show abs(log(λ_prod) -  MathConstants.catalan/π)
+env, = leading_boundary(env0_prod_final, Z; tol = 1.0e-9, maxiter = 4, verbosity = 3);
+@show network_value(Z, env)

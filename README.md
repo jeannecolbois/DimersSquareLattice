@@ -30,7 +30,3 @@ This runs CTMRG and computes the correlations for a series of bond dimensions an
 
 `DimersSquareTestInit.jl` is a work-in-progress script to check the custom environment
 initializer on the `lb/initialize_env` branch of PEPSKit.
-
-## Author
-
-Jeanne Colbois, 2026.
